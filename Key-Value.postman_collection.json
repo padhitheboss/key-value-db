@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "a8625275-5cbe-4bc8-813a-dec609cd5223",
+		"name": "Key-Value",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "set",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"command\": \"SET hello world\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/command",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"command"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"command\": \"GET hello\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/command",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"command"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "qpush",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"command\": \"QPUSH q1 1 2 3 4\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/command",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"command"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "qpop",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"command\": \"QPOP q1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/command",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"command"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
